@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Area calculator</title>
+</head>
+<body>
+    <center>
+    <h1 style="color: blueviolet;">Area calculator</h1>
+    <div class="container" style="background-color: rgb(21, 117, 117);">
+        <center>
+        <h1 style="color: rgb(236, 149, 42);">Square</h1>
+        <label>Side:</label>
+        <input type="number" id="square_1"><br><br>
+        <button onclick="square()" style="color: rgb(183, 1, 255); background-color: rgb(128, 228, 34);">Click Me!</button><br><br>
+        <img src="square.png" alt="" width="150">
+        <p id="result1" style="color: rgb(233, 29, 14); font-size: 40px;"> </p>
+        </center>
+    </div>
+
+    <div class="container" style="background-color: rgb(142, 11, 218);">
+        <center>
+            <h1 style="color: rgb(15, 37, 233);">Rectangle</h1>
+            <label>Length:</label>
+            <input type="number" id="rectangle_1"><br><br>
+            <label>Breadth:</label>
+            <input type="number" id="rectangle_2"><br><br>
+            <button onclick="rectangle()" style="color: rgb(221, 16, 16); background-color: rgb(32, 197, 209);">Click
+                Me!</button><br><br>
+            <img src="rectangle.png" alt="" width="150">
+            <p id="result2" style="color: rgb(23, 236, 16); font-size: 40px;"> </p>
+        </center>
+    </div>
+
+    <div class="container" style="background-color: rgb(70, 218, 11);">
+        <center>
+            <h1 style="color: rgb(233, 15, 15);">Circle</h1>
+            <label>Radius:</label>
+            <input type="number" id="radius"><br><br>
+            <button onclick="circle()" style="color: rgb(228, 174, 25); background-color: rgb(32, 197, 209);">Click
+                Me!</button><br><br>
+            <img src="circle.png" alt="" width="150">
+            <p id="result3" style="color: rgb(231, 117, 24); font-size: 40px;"> </p>
+        </center>
+    </div>
+
+    <div class="container" style="background-color: rgb(218, 11, 90);">
+        <center>
+            <h1 style="color: rgb(15, 233, 26);">Parallelogram</h1>
+            <label>Length:</label>
+            <input type="number" id="Length"><br><br>
+            <label>Breadth:</label>
+            <input type="number" id="Breadth"><br><br>
+            <button onclick="Parallelogram()"
+                style="color: rgb(221, 16, 16); background-color: rgb(64, 32, 209);">Click
+                Me!</button><br><br>
+            <img src="image.png" alt="" width="150">
+            <p id="result4" style="color: rgb(11, 83, 131); font-size: 40px;"> </p>
+        </center>
+    </div>
+
+    <script>
+        function square()
+        { 
+            var number=Number(document.getElementById("square_1").value);
+            var area=number*number
+            document.getElementById("result1").innerHTML="Area: " + area;
+        }
+
+        function rectangle()
+        {
+        var Length=Number(document.getElementById("rectangle_1").value);
+        var Breadth=Number(document.getElementById("rectangle_2").value);
+        var area=Length*Breadth
+        document.getElementById("result2").innerHTML="Area: " + area;
+        }
+
+        function circle()
+        {
+        var radius=Number(document.getElementById("radius").value);
+        var area=radius*3.14*radius
+        document.getElementById("result3").innerHTML="Area: " + area;
+        }
+
+        function Parallelogram()
+        {
+        var Length=Number(document.getElementById("Length").value);
+        var Breadth=Number(document.getElementById("Breadth").value);
+        var area=Length*Breadth
+        document.getElementById("result4").innerHTML="Area: " + area;
+        }
+    </script>
+    </center>
+</body>
+</html>
